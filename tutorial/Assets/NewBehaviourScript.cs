@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    void Start()
+    void Update()
     {
-        Debug.Log("Hello Unity!");
+        if (Input.anyKeyDown)
+        {
+            Debug.Log("키 누름");
+        }
+        if (Input.anyKey)
+        {
+            Debug.Log("키 누르는 중");
+        }
     }
 }
