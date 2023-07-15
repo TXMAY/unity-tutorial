@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    Rigidbody rigid;
+
+    void Start()
+    {
+        rigid = GetComponent<Rigidbody>();
+    }
     void Update()
     {
-        if (Input.anyKeyDown)
-        {
-            Debug.Log("키 누름");
-        }
-        if (Input.anyKey)
-        {
-            Debug.Log("키 누르는 중");
-        }
+        Vector3 vec = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+
+        rigid.AddForce(vec, ForceMode.Impulse);
     }
 }
