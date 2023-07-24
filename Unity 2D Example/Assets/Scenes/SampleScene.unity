@@ -2412,6 +2412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 4.5
+  jumpPower: 15
 --- !u!70 &2022728940
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
