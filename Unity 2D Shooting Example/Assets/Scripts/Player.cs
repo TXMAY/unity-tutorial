@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     public bool isHit;
     public bool isBoomTime;
 
+    public GameObject[] followers;
+
     Animator anim;
 
     void Awake()
@@ -85,10 +87,10 @@ public class Player : MonoBehaviour
                 rigid.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
                 break;
             case 2:
-                GameObject bulletR = objectManager.MakeObj("BulletplayerA");
+                GameObject bulletR = objectManager.MakeObj("BulletPlayerA");
                 bulletR.transform.position = transform.position + Vector3.right * 0.1f;
 
-                GameObject bulletL = objectManager.MakeObj("BulletplayerA");
+                GameObject bulletL = objectManager.MakeObj("BulletPlayerA");
                 bulletL.transform.position = transform.position + Vector3.left * 0.1f;
 
                 Rigidbody2D rigidR = bulletR.GetComponent<Rigidbody2D>();
@@ -96,14 +98,14 @@ public class Player : MonoBehaviour
                 rigidR.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
                 rigidL.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
                 break;
-            case 3:
-                GameObject bulletRR = objectManager.MakeObj("BulletplayerA");
+            default:
+                GameObject bulletRR = objectManager.MakeObj("BulletPlayerA");
                 bulletRR.transform.position = transform.position + Vector3.right * 0.25f;
 
-                GameObject bulletCC = objectManager.MakeObj("BulletplayerB");
+                GameObject bulletCC = objectManager.MakeObj("BulletPlayerB");
                 bulletCC.transform.position = transform.position;
 
-                GameObject bulletLL = objectManager.MakeObj("BulletplayerA");
+                GameObject bulletLL = objectManager.MakeObj("BulletPlayerA");
                 bulletLL.transform.position = transform.position + Vector3.left * 0.25f;
 
                 Rigidbody2D rigidRR = bulletRR.GetComponent<Rigidbody2D>();
@@ -245,6 +247,7 @@ public class Player : MonoBehaviour
                     else
                     {
                         power++;
+                        AddFollower();
                     }
                     break;
                 case "Boom":
@@ -267,6 +270,22 @@ public class Player : MonoBehaviour
     {
         boomEffect.SetActive(false);
         isBoomTime = false;
+    }
+
+    void AddFollower()
+    {
+        if (power == 4)
+        {
+            followers[0].SetActive(true);
+        }
+        else if (power == 5)
+        {
+            followers[1].SetActive(true);
+        }
+        else if (power == 6)
+        {
+            followers[2].SetActive(true);
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)
