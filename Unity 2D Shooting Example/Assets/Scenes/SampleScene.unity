@@ -1096,7 +1096,7 @@ MonoBehaviour:
   speed: 3
   maxPower: 6
   maxBoom: 3
-  power: 1
+  power: 3
   boom: 0
   maxShotDelay: 0.15
   curShotDelay: 0
@@ -1107,7 +1107,10 @@ MonoBehaviour:
   objectManager: {fileID: 1151260377}
   isHit: 0
   isBoomTime: 0
-  followers: []
+  followers:
+  - {fileID: 1885315457}
+  - {fileID: 191700617}
+  - {fileID: 1884391934}
 --- !u!50 &279072715
 Rigidbody2D:
   serializedVersion: 4
@@ -1153,7 +1156,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 1}
   m_EdgeRadius: 0
 --- !u!95 &279072717
 Animator:
@@ -2371,6 +2374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d9f9f9d95259c4b9985bea394f2d57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyBPrefab: {fileID: 4611814274006391176, guid: b1180c4c979d16f44961b25491ad204e, type: 3}
   enemyLPrefab: {fileID: 8154476698420891709, guid: facfad7e2b21b9447a1fdc00e66219c2, type: 3}
   enemyMPrefab: {fileID: 5734076880046903541, guid: 4e262e2af2fa4e149892a4219cc4a4d9, type: 3}
   enemySPrefab: {fileID: 5874339879009861234, guid: 8aaff469b64b318448914600cea995fc, type: 3}
@@ -2382,6 +2386,8 @@ MonoBehaviour:
   bulletEnemyAPrefab: {fileID: 9082905705197796899, guid: 93fa371810e7641449d79e22eaf278ba, type: 3}
   bulletEnemyBPrefab: {fileID: 9082905705197796899, guid: fa482f79e1af80647b92e26fc6a4ff7c, type: 3}
   bulletFollowerPrefab: {fileID: 696562797642562974, guid: d6956436c4d407042817c39fd56fa351, type: 3}
+  bulletBossAPrefab: {fileID: 9082905705197796899, guid: 0f2ebb1b715a0624eb6eaf079d9bf1dc, type: 3}
+  bulletBossBPrefab: {fileID: 9082905705197796899, guid: f5d54459cba4e014ca22b5da6e356e45, type: 3}
 --- !u!1 &1180604070
 GameObject:
   m_ObjectHideFlags: 0
