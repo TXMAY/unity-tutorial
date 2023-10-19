@@ -1111,6 +1111,7 @@ MonoBehaviour:
   - {fileID: 1885315457}
   - {fileID: 191700617}
   - {fileID: 1884391934}
+  isRespawnTime: 0
 --- !u!50 &279072715
 Rigidbody2D:
   serializedVersion: 4
@@ -2388,6 +2389,7 @@ MonoBehaviour:
   bulletFollowerPrefab: {fileID: 696562797642562974, guid: d6956436c4d407042817c39fd56fa351, type: 3}
   bulletBossAPrefab: {fileID: 9082905705197796899, guid: 0f2ebb1b715a0624eb6eaf079d9bf1dc, type: 3}
   bulletBossBPrefab: {fileID: 9082905705197796899, guid: f5d54459cba4e014ca22b5da6e356e45, type: 3}
+  explosionPrefab: {fileID: 7477872462878346197, guid: 8517fc91eb5602e4388c5ec36039c370, type: 3}
 --- !u!1 &1180604070
 GameObject:
   m_ObjectHideFlags: 0
